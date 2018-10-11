@@ -65,7 +65,11 @@ class Main
          * Task 3. Add 1 to each element in ar1.  Print it out below
          */
         
-
+        for (int i=0; i<ar1.length; i++)
+        {
+            ar1[i] = ar1[i] +1;
+            System.out.println("ar1[" + i + "] = "+ar1[i]);
+        }
         
         
         /*
