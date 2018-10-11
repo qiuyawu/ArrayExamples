@@ -101,6 +101,18 @@ class Main
          * Task 5.  Switch the first and last element of ar1.
          *          print out the new ar1.  Then switch them back
          */
+        System.out.println("*** Task 5 ***");
+        
+        int value;
+        value=ar1[0];
+        ar1[0]=ar1[ar1.length-1];
+        ar1[ar1.length-1]=value;
+            
+        for (int i=0; i<ar1.length; i++)
+        {
+            System.out.println("ar1[" + i + "] = " +ar1[i]);
+        }
+        
         
         /*
          * Task 6A. Print the 2nd to (n-1)th elements of ar1
