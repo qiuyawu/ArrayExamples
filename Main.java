@@ -80,6 +80,22 @@ class Main
          *         ar3: 1 2 3 0 1 2 3
          */
         
+        int[] ar3 = new int[2*ar1.length];
+        
+        for (int i=0; i<ar1.length; i++)
+        {
+            ar3[i] = ar1[i];
+        }
+        
+        for (int i=0; i<ar1.length; i++)
+        {
+            ar3[i+ar1.length] = ar1[i];
+        }
+        
+        for (int i=0; i<ar3.length; i++)
+        { 
+            System.out.println("ar3[" + i +"] = "+ar3[i]);
+        }
         
         /*
          * Task 5.  Switch the first and last element of ar1.
