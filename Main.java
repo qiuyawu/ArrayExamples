@@ -162,6 +162,18 @@ class Main
          *          ar[3]=4
          */
         
+        for (int i=0; i<ar1.length; i++)
+        {
+            if (i%2==0)
+            System.out.println(ar1[i]);
+            
+            else
+            {
+                ar1[i]*=10;
+                System.out.println(ar1[i]);
+            }
+        }
+        
          /*
           * Task 8
           *    Create an array called ar2odds
