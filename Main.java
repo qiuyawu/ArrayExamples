@@ -80,38 +80,37 @@ class Main
          *         ar3: 1 2 3 0 1 2 3
          */
         
-        int[] ar3 = new int[2*ar1.length];
-        
-        for (int i=0; i<ar1.length; i++)
+         System.out.println("** test 4 **");
+        int[] ar3 = new int[ ar1.length *2 ];
+        for (int i=0 ; i< ar1.length ; i++)
         {
-            ar3[i] = ar1[i];
+            ar3[i]=ar1[i];
         }
         
-        for (int i=0; i<ar1.length; i++)
+        for (int i=0 ; i<ar1.length ; i++)
         {
-            ar3[i+ar1.length] = ar1[i];
+            ar3[i+ar1.length]=ar1[i];
         }
         
-        for (int i=0; i<ar3.length; i++)
-        { 
-            System.out.println("ar3[" + i +"] = "+ar3[i]);
-        }
-        
+        for (int i=0 ; i<ar3.length ; i++)
+            System.out.println("ar3[" + i + "] = "+ar3[i]);
+        //  
         /*
          * Task 5.  Switch the first and last element of ar1.
          *          print out the new ar1.  Then switch them back
          */
-        System.out.println("*** Task 5 ***");
-        
-        int value;
+         int value;
         value=ar1[0];
         ar1[0]=ar1[ar1.length-1];
         ar1[ar1.length-1]=value;
-            
-        for (int i=0; i<ar1.length; i++)
-        {
-            System.out.println("ar1[" + i + "] = " +ar1[i]);
-        }
+        
+        for (int i=0 ; i<ar1.length ; i++)
+            System.out.println("ar1[" + i + "] = "+ar1[i]);
+        
+        // The Restoration of the rightful heir
+        value=ar1[0];
+        ar1[0]=ar1[ar1.length-1];
+        ar1[ar1.length-1]=value;
         
         
         /*
@@ -162,6 +161,7 @@ class Main
          *          ar[3]=4
          */
         
+        System.out.println("***Task 7***");
         for (int i=0; i<ar1.length; i++)
         {
             if (i%2==0)
@@ -185,19 +185,23 @@ class Main
           *    ar2[3]=3  ->  ar2odds[1]=3
           */
          
-         int m=-1;
-         int[] ar2odds = new int[m];
-         int n=ar2.length-1;
+         System.out.println(" ** Task 8 **");
+         int k=0;
+         int[] ar2odds= new int[ar2.length];
+         for ( int i=0 ; i<ar2.length ; i++)
+           {
+               System.out.println(ar2[i]); // Just print it out to see
+               
+               if (i%2==1)
+               {
+                   ar2odds[k]=ar2[i];
+                   k++;
+               }
+           }
+           
+           for (int i=0 ; i<k ; i++)
+               System.out.println(ar2odds[i]);
       
-         
-         for (int i=0; i<ar2.length; i++)
-         {
-             if (n%2=1)
-             {
-                 m++;
-                 ar2odds[m]=ar2[i];
-             }
-             
              
          
         /*
@@ -205,7 +209,30 @@ class Main
          * have.  Then create an ew array called ar4.  Copy just the odd
          * numbers from ar1 into ar4.  Print ar4
          */
+        System.out.println("***Task 9***");
+        int task9Number=0;
+        for (int i=0; i<ar2.length; i++)
+        {
+            if(ar2[i]%2==1)
+            task9Number++;
+        }
+        System.out.println("Number of odd numbers: "+task9Number);
         
+        int[] ar4=new int[task9Number];
+        int task9NumberIndex=0;
+        for (int i=0; i<ar2.length;i++)
+        {
+            if(ar2[i]%2==1)
+            {
+                ar4[task9NumberIndex]=ar2[i];
+                task9NumberIndex++;
+            }
+        }
+            
+        for (int i=0; i<task9Number; i++)
+        {
+            System.out.println(ar4[i]+" ");
+        }
         /*
          * Task 10.  Shift the elements of ar4 right by 1
          * For example
@@ -213,6 +240,10 @@ class Main
          * new   ar4  9 1 3 5 7
          */
         
+        System.out.println("***Task 10***");
+        for (int i=0; i<ar4.length; i++)
+        {
+            S
         
         /*
          * Task 11.  Reverse the order of elements in ar2
