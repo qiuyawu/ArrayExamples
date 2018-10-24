@@ -33,7 +33,7 @@ class Main
         int[] ar1 = new int[n];
         
         for (int i=0; i<n; i++)
-              ar1[i]=i+1;
+              ar1[i]=i;
         
         for (int i=0; i<n; i++)
         {
@@ -45,7 +45,7 @@ class Main
          * Task 2.  Create a new array called ar2.
          *          Copy the elements of ar1 into ar2.
          */
-        
+        System.out.println("***Task 2***");
         int[] ar2 = new int[ar1.length];
         
       
@@ -54,7 +54,7 @@ class Main
             ar2[i]=ar1[i];
         }
         
-        for (int i=0; i<ar2.length; i++)
+        for (int i=0; i<n; i++)
         {
               System.out.println("ar2[" + i + "] = "+ar2[i]);
         }
@@ -64,8 +64,8 @@ class Main
         /* 
          * Task 3. Add 1 to each element in ar1.  Print it out below
          */
-        
-        for (int i=0; i<ar1.length; i++)
+        System.out.println("***Task 3***");
+        for (int i=0; i<n; i++)
         {
             ar1[i] = ar1[i] +1;
             System.out.println("ar1[" + i + "] = "+ar1[i]);
@@ -99,7 +99,8 @@ class Main
          * Task 5.  Switch the first and last element of ar1.
          *          print out the new ar1.  Then switch them back
          */
-         int value;
+        System.out.println("***Task 5***");
+        int value;
         value=ar1[0];
         ar1[0]=ar1[ar1.length-1];
         ar1[ar1.length-1]=value;
@@ -116,7 +117,7 @@ class Main
         /*
          * Task 6A. Print the 2nd to (n-1)th elements of ar1
          */
-        
+        System.out.println("***Task 6A***");
         for (int i=1 ; i<ar1.length-1 ; i++)
          System.out.println(ar1[i]);
       
@@ -124,7 +125,7 @@ class Main
         /*
          * Task 6B: Print out just the odd numbers in ar1
          */
-        
+        System.out.println("***Task 6B***");
         for (int i=0; i<ar1.length; i++)
         {
             if (ar1[i]%2!=0)
@@ -239,16 +240,47 @@ class Main
          * old   ar4: 1 3 5 7 9
          * new   ar4  9 1 3 5 7
          */
+      
+         System.out.println("** Task 10 ** ");
+         System.out.println("Original ar4");
+         for (int i=0 ; i<ar4.length ; i++)
+             System.out.println(ar4[i]);
         
-        System.out.println("***Task 10***");
-        for (int i=0; i<ar4.length; i++)
-        {
-            S
+         int temp10=ar4[ar4.length-1];
+         
+         for (int i=ar4.length-1 ; i>0 ; i--)
+            ar4[i]=ar4[i-1];
+         
+         ar4[0]=temp10;
+            
+         System.out.println("New ar4");
+         for (int i=0 ; i<ar4.length ; i++)
+             System.out.println(ar4[i]);
+        
         
         /*
          * Task 11.  Reverse the order of elements in ar2
          */
+        System.out.println("** Task 11 **");
+        for (int i=0 ; i<ar2.length ; i++)
+            System.out.println("ar2["+i+"] = "+ar2[i]);
+            
+        int ar2half = ar2.length/2;
+        System.out.println(ar2half);
+        int task11Temp;
+        for (int i=0 ; i<ar2half ; i++)
+        {
+            task11Temp = ar2[i];
+            System.out.println(" "+i+":"+(ar2.length-i));
+            ar2[i] = ar2[ar2.length-1-i];
+            ar2[ar2.length-1-i]=task11Temp;
+        }
+               
+        for (int i=0 ; i<ar2.length ; i++)
+            System.out.println("ar2["+i+"] = "+ar2[i]);
         
+            
+            
         
         /*
          * Task 12: 
