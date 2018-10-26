@@ -325,25 +325,19 @@ ar5[13]="a";
 ar5[14]="new";
 ar5[15]="nation";
 
-for(int i=
-int  len = ar5[i].length();
+int count5=0;
+ 
+ for (int i=0 ; i<ar5.length ; i++)
+ {
+ 
+     if (ar5[i].length()>5)
+         count5++;
+ }
+ 
+ System.out.println(" TASK 12: is " + count5);
+ 
 
-int over5=0;
-
-int[] ar6 = new int[16];
-for (int i=0; i<16; i++)
-{
-    ar6[i] = len[i];
-    if (len>5)
-    {
-        over5++;
-     
-    }
-    
-    System.out.println("ar6[ " +i+"]" = ar6[i]);
-}
-
-System.out.println("Number of Words over 5 Letters: "+over5);
+System.out.println("Number of Words over 5 Letters: "+count5);
         /*
          * Task 13
          * Create an array called monsterArray of 5 Monsters.
@@ -358,6 +352,11 @@ System.out.println("Number of Words over 5 Letters: "+over5);
          * Use a for loop to print out the names of monster that start with
          * a vowel
          */
+        
+        int[] monsterArray = {"Cookie", "Grover", "Oscar the Grouch", "Elmo", "Rosita"};
+        
+        for (int i=0; i<monsterArray.length; i++)
+        
         
          /*
           * Task 14
