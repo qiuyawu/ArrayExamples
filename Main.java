@@ -12,9 +12,8 @@ class Main
     
     public static void main( String[] args)
     {
-     
-     
         
+       
         /*
          * SET UP
          * We are going to ask the user to input an integer 
@@ -309,35 +308,35 @@ class Main
         System.out.println("***Task 12***");
         String[] ar5 = new String[16];
         ar5[0]="Four";
- ar5[1]="score";
-ar5[2]="and";
-ar5[3]="seven";
-ar5[4]="years";
-ar5[5]="ago";
-ar5[6]="our";
-ar5[7]="fathers";
-ar5[8]="brought";
-ar5[9]="forth";
-ar5[10]="on";
-ar5[11]="this";
-ar5[12]="continent";
-ar5[13]="a";
-ar5[14]="new";
-ar5[15]="nation";
+        ar5[1]="score";
+        ar5[2]="and";
+        ar5[3]="seven";
+        ar5[4]="years";
+        ar5[5]="ago";
+        ar5[6]="our";
+        ar5[7]="fathers";
+        ar5[8]="brought";
+        ar5[9]="forth";
+        ar5[10]="on";
+        ar5[11]="this";
+        ar5[12]="continent";
+        ar5[13]="a";
+        ar5[14]="new";
+        ar5[15]="nation";
 
-int count5=0;
+        int count5=0;
  
- for (int i=0 ; i<ar5.length ; i++)
- {
+        for (int i=0 ; i<ar5.length ; i++)
+        {
  
-     if (ar5[i].length()>5)
-         count5++;
- }
+            if (ar5[i].length()>5)
+            count5++;
+        }
  
- System.out.println(" TASK 12: is " + count5);
+        System.out.println(" TASK 12: is " + count5);
  
 
-System.out.println("Number of Words over 5 Letters: "+count5);
+        System.out.println("Number of Words over 5 Letters: "+count5);
         /*
          * Task 13
          * Create an array called monsterArray of 5 Monsters.
@@ -353,9 +352,20 @@ System.out.println("Number of Words over 5 Letters: "+count5);
          * a vowel
          */
         
-        int[] monsterArray = {"Cookie", "Grover", "Oscar the Grouch", "Elmo", "Rosita"};
+        String[] monsterArray = {"Cookie", "Grover", "Oscar the Grouch", "Elmo", "Rosita"};
         
         for (int i=0; i<monsterArray.length; i++)
+        {
+            System.out.println(" [ "+i+"] "+monsterArray[i]);
+        }
+
+        for (int i=0 ; i<monsterArray.length; i++)
+        {
+            char c= monsterArray[i].toLowerCase().charAt(0);
+            if (c=='a' || c=='e' || c=='i' || c=='o' || c=='u')
+            System.out.println(monsterArray[i]); 
+        }
+        
         
         
          /*
@@ -373,7 +383,33 @@ System.out.println("Number of Words over 5 Letters: "+count5);
           *      So arindex[0]=2
           *         arindex[1]=5
           */
+         System.out.println("** Task 14 **");
          
+         int[] arx = new int[92];
+         int task14 = 0;
+         
+          for (int i=0 ; i<92 ; i++)
+          {
+              arx[i]=i+3;
+              if (arx[i]%3==0)
+              task14++;
+            }
+
+
+            int[] arxindex = new int[task14];
+            int k14=0;
+            for (int i=0 ; i<92 ; i++)
+            {
+                if (arx[i]%3==0)
+                { 
+                    arxindex[k14]=i;
+                    k14++;
+                }
+            }
+
+
+            for (int i=0 ; i<k14; i++)
+            System.out.println(arxindex[i]);
          /*
           * Create an arrary called "fb" and calculate the
           * first 10 fibonacci sequence.  You start with
@@ -383,6 +419,15 @@ System.out.println("Number of Words over 5 Letters: "+count5);
           * fb[3]=fb[1]+fb[2]
           * fb[4]=fb[2]+fb[3]
           */
+         System.out.println("***Task 15***");
+         int[] fb = new int[10];
+         fb[0] = 1;
+         fb[1] = 1;
+        for (int i=2; i<fb.length; i++)
+        {
+            fb[i]=fb[i-2] + fb[i-1];
+            System.out.println(fb[i]);
         
+        }
     }
 }
